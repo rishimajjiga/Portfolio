@@ -8,13 +8,11 @@
   <meta property="og:type" content="website" />
   <meta property="og:image" content="images/profile.jpeg" />
   <title>Majjiga Rishi | Portfolio</title>
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
   <style>
     :root {
       --primary: #7c3aed;
@@ -42,7 +40,6 @@
       --text: #0f172a; --text-muted: #64748b;
       --border: rgba(124,58,237,0.12);
     }
-
     *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
     html { scroll-behavior: smooth; }
     body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--text); transition:background 0.4s,color 0.4s; overflow-x:hidden; }
@@ -50,10 +47,8 @@
     ::-webkit-scrollbar { width:5px; }
     ::-webkit-scrollbar-track { background:var(--bg2); }
     ::-webkit-scrollbar-thumb { background:var(--primary); border-radius:3px; }
-
     /* PROGRESS */
     #page-progress { position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--primary),var(--cyan),var(--accent));width:0%;z-index:9999;transition:width 0.1s; }
-
     /* ======== NAVBAR ======== */
     nav {
       position:fixed;top:0;left:0;right:0;z-index:1000;
@@ -77,7 +72,6 @@
     .theme-toggle:hover { background:var(--primary);border-color:var(--primary); }
     .hamburger { display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px; }
     .hamburger span { display:block;width:24px;height:2px;background:var(--text);border-radius:2px;transition:all 0.3s; }
-
     /* ======== HERO ======== */
     #hero { min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:6rem 3rem 3rem;max-width:100%; }
     .hero-bg { position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(124,58,237,0.2) 0%,transparent 70%),radial-gradient(ellipse 50% 50% at 85% 85%,rgba(6,182,212,0.1) 0%,transparent 60%),var(--bg); }
@@ -87,52 +81,43 @@
     .orb-2 { width:300px;height:300px;background:rgba(6,182,212,0.08);bottom:-60px;right:-60px;animation-delay:-4s; }
     .orb-3 { width:180px;height:180px;background:rgba(245,158,11,0.07);top:38%;right:22%;animation-delay:-2s; }
     @keyframes float { 0%,100%{transform:translateY(0) scale(1)} 50%{transform:translateY(-22px) scale(1.04)} }
-
     .hero-inner { position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;max-width:1200px;margin:0 auto;width:100%; }
-
     .hero-badge { display:inline-flex;align-items:center;gap:0.5rem;background:rgba(124,58,237,0.14);border:1px solid rgba(124,58,237,0.3);padding:0.4rem 1rem;border-radius:100px;font-size:0.78rem;font-weight:700;color:var(--primary-light);width:fit-content;margin-bottom:0.5rem; }
     .badge-dot { width:6px;height:6px;background:var(--green);border-radius:50%;animation:pulse-dot 2s infinite; }
     @keyframes pulse-dot { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(1.6)} }
-
     .hero-title { font-size:clamp(2.4rem,5vw,3.8rem);font-weight:900;line-height:1.08;margin-bottom:0.3rem; }
     .hero-title .name { background:linear-gradient(135deg,var(--primary-light) 0%,var(--cyan) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text; }
-
     .typing-wrap { display:flex;align-items:center;gap:0.5rem;font-size:1.05rem;color:var(--text-muted);margin-bottom:0.5rem; }
     .typing-text { color:var(--accent);font-weight:700;font-family:'Fira Code',monospace; }
     .cursor { display:inline-block;width:2px;height:1.1em;background:var(--accent);animation:blink 1s step-end infinite;vertical-align:text-bottom; }
     @keyframes blink { 50%{opacity:0} }
-
     .hero-desc { color:var(--text-muted);line-height:1.85;font-size:0.97rem;max-width:440px;margin-bottom:0.5rem; }
     .hero-btns { display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:1rem; }
-
     .btn-primary { display:inline-flex;align-items:center;gap:0.5rem;padding:0.88rem 2rem;border-radius:var(--radius-sm);background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:white;font-weight:700;text-decoration:none;box-shadow:0 0 25px rgba(124,58,237,0.4);transition:all 0.3s;font-size:0.92rem; }
     .btn-primary:hover { transform:translateY(-2px);box-shadow:0 0 40px rgba(124,58,237,0.65); }
     .btn-outline { display:inline-flex;align-items:center;gap:0.5rem;padding:0.88rem 2rem;border-radius:var(--radius-sm);border:1px solid var(--border);color:var(--text);font-weight:600;text-decoration:none;background:rgba(255,255,255,0.03);transition:all 0.3s;font-size:0.92rem; }
     .btn-outline:hover { border-color:var(--primary);background:rgba(124,58,237,0.08);transform:translateY(-2px); }
-
     .hero-socials { display:flex;gap:0.7rem;margin-bottom:1.5rem; }
     .soc { width:40px;height:40px;border-radius:50%;border:1px solid var(--border);background:var(--surface);display:flex;align-items:center;justify-content:center;color:var(--text-muted);text-decoration:none;transition:all 0.3s;font-size:0.88rem; }
     .soc:hover { border-color:var(--primary);color:var(--primary);transform:translateY(-3px);box-shadow:0 6px 16px rgba(124,58,237,0.22); }
-
     .hero-stats { display:flex;gap:2.5rem;padding-top:1rem;border-top:1px solid var(--border); }
     .stat { display:flex;flex-direction:column; }
     .stat-n { font-size:1.8rem;font-weight:900;color:var(--text); }
     .stat-n span { color:var(--primary); }
     .stat-l { font-size:0.72rem;color:var(--text-muted);font-weight:600;text-transform:uppercase;letter-spacing:0.04em; }
-
     /* PROFILE RING */
     .hero-visual { display:flex;justify-content:center;align-items:center; }
     .ring-wrap { position:relative;display:flex;align-items:center;justify-content:center; }
     .profile-ring { width:350px;height:350px;border-radius:50%;background:conic-gradient(from 0deg,var(--primary),var(--cyan),var(--accent),var(--pink),var(--primary));padding:4px;animation:spin 7s linear infinite; }
     @keyframes spin { to{transform:rotate(360deg)} }
-    .ring-inner { width:100%;height:100%;border-radius:50%;overflow:hidden;background:var(--bg2);border:5px solid var(--bg2); }
+    @keyframes counter-spin { to { transform:rotate(-360deg); } }
+    .ring-inner { width:100%;height:100%;border-radius:50%;overflow:hidden;background:var(--bg2);border:5px solid var(--bg2); animation:counter-spin 7s linear infinite; }
     .ring-inner img { width:100%;height:100%;object-fit:cover;object-position:center top; }
     .ring-badge { position:absolute;background:rgba(15,23,42,0.92);border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.65rem 0.9rem;display:flex;align-items:center;gap:0.6rem;font-size:0.78rem;font-weight:700;box-shadow:0 8px 30px rgba(0,0,0,0.4);backdrop-filter:blur(10px); }
     .ring-badge.tl { top:-5px;left:-40px; }
     .ring-badge.br { bottom:10px;right:-40px; }
     .ring-badge i { color:var(--primary);font-size:1.1rem; }
     .ring-badge .rb-label { font-size:0.65rem;color:var(--text-muted);font-weight:500; }
-
     /* ======== SECTIONS ======== */
     section { padding:6rem 3rem;max-width:1200px;margin:0 auto; }
     .sec-header { text-align:center;margin-bottom:4rem; }
@@ -140,7 +125,6 @@
     .sec-title { font-size:clamp(1.8rem,3vw,2.4rem);font-weight:900;margin-bottom:0.7rem; }
     .sec-title span { color:var(--primary); }
     .sec-sub { color:var(--text-muted);font-size:0.97rem;max-width:480px;margin:0 auto; }
-
     /* ======== ABOUT ======== */
     .about-grid { display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start; }
     .about-p { color:var(--text-muted);line-height:1.92;margin-bottom:1.1rem;font-size:0.97rem; }
@@ -156,7 +140,6 @@
     .a-card-icon { width:46px;height:46px;border-radius:var(--radius-sm);background:rgba(124,58,237,0.14);display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:0.8rem; }
     .a-card h4 { font-size:0.97rem;font-weight:700;margin-bottom:0.3rem; }
     .a-card p { color:var(--text-muted);font-size:0.83rem;line-height:1.65; }
-
     /* ======== SKILLS ======== */
     .skills-grid { display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:1.4rem; }
     .sk-cat { background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.7rem;transition:all 0.3s; }
@@ -175,16 +158,12 @@
     .sk.green:hover { background:var(--green);color:white;border-color:var(--green);transform:scale(1.05); }
     .sk.pink { background:rgba(236,72,153,0.1);border:1px solid rgba(236,72,153,0.25);color:var(--pink); }
     .sk.pink:hover { background:var(--pink);color:white;border-color:var(--pink);transform:scale(1.05); }
-
     /* ======== PROJECTS ======== */
     .projects-grid { display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:1.8rem; }
-
     /* Featured row — first 2 take full width on their row */
     .project-card.featured { grid-column:span 1; }
-
     .project-card { background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:all 0.35s;position:relative;display:flex;flex-direction:column; }
     .project-card:hover { transform:translateY(-7px);box-shadow:0 24px 55px rgba(124,58,237,0.22);border-color:rgba(124,58,237,0.45); }
-
     .proj-img { position:relative;height:185px;overflow:hidden; }
     .proj-placeholder { width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:3.5rem; }
     .proj-placeholder.g1 { background:linear-gradient(135deg,rgba(124,58,237,0.25),rgba(6,182,212,0.15)); }
@@ -195,7 +174,7 @@
     .proj-placeholder.g6 { background:linear-gradient(135deg,rgba(236,72,153,0.2),rgba(6,182,212,0.12)); }
     .proj-placeholder.g7 { background:linear-gradient(135deg,rgba(245,158,11,0.2),rgba(124,58,237,0.15)); }
     .proj-placeholder.g8 { background:linear-gradient(135deg,rgba(16,185,129,0.22),rgba(6,182,212,0.15)); }
-
+    .proj-placeholder.g9 { background:linear-gradient(135deg,rgba(124,58,237,0.22),rgba(16,185,129,0.18)); }
     /* AI badge styles */
     .ai-badge {
       position:absolute;top:10px;left:10px;
@@ -205,9 +184,7 @@
     }
     .ai-badge.deep { background:linear-gradient(135deg,rgba(124,58,237,0.92),rgba(236,72,153,0.85));color:white; }
     .ai-badge.assisted { background:linear-gradient(135deg,rgba(6,182,212,0.88),rgba(124,58,237,0.88));color:white; }
-
     .featured-star { position:absolute;top:10px;right:10px;background:rgba(245,158,11,0.92);color:white;padding:0.28rem 0.65rem;border-radius:100px;font-size:0.68rem;font-weight:800; }
-
     .proj-body { padding:1.45rem;flex:1;display:flex;flex-direction:column;gap:0.75rem; }
     .proj-title { font-size:1.05rem;font-weight:800; }
     .proj-desc { color:var(--text-muted);font-size:0.84rem;line-height:1.72;flex:1; }
@@ -219,11 +196,9 @@
     .plink.demo:hover { box-shadow:0 0 24px rgba(124,58,237,0.55);transform:translateY(-1px); }
     .plink.code { border:1px solid var(--border);color:var(--text-muted);background:rgba(255,255,255,0.02); }
     .plink.code:hover { border-color:var(--primary);color:var(--primary); }
-
     .projects-more { text-align:center;margin-top:2.5rem; }
     .gh-link { display:inline-flex;align-items:center;gap:0.6rem;padding:0.9rem 2rem;border-radius:var(--radius-sm);border:1px solid var(--border);color:var(--text);text-decoration:none;font-weight:700;transition:all 0.3s;background:var(--surface); }
     .gh-link:hover { border-color:var(--primary);background:rgba(124,58,237,0.08);transform:translateY(-2px);box-shadow:var(--card-glow); }
-
     /* AI Integration Banner */
     .ai-banner {
       background:linear-gradient(135deg,rgba(124,58,237,0.12),rgba(6,182,212,0.08));
@@ -236,13 +211,11 @@
     .ai-banner-icon { font-size:2rem;flex-shrink:0; }
     .ai-banner h4 { font-size:1rem;font-weight:800;margin-bottom:0.2rem; }
     .ai-banner p { color:var(--text-muted);font-size:0.84rem;line-height:1.6; }
-
     /* ======== RESUME ======== */
     .resume-box { background:linear-gradient(135deg,rgba(124,58,237,0.1),rgba(6,182,212,0.06));border:1px solid var(--border);border-radius:var(--radius);padding:4rem 3rem;text-align:center; }
     .resume-box h3 { font-size:1.5rem;font-weight:800;margin-bottom:0.7rem; }
     .resume-box p { color:var(--text-muted);margin-bottom:2rem;font-size:0.97rem; }
     .resume-btns { display:flex;gap:1rem;justify-content:center;flex-wrap:wrap; }
-
     /* ======== FAQ ======== */
     .faq-list { display:flex;flex-direction:column;gap:0.9rem;max-width:720px;margin:0 auto; }
     details { background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden;transition:all 0.3s; }
@@ -252,7 +225,6 @@
     summary::after { content:'+';color:var(--primary);font-size:1.5rem;font-weight:300;transition:transform 0.3s;line-height:1; }
     details[open] summary::after { transform:rotate(45deg); }
     details p { padding:0 1.5rem 1.2rem;color:var(--text-muted);line-height:1.75;font-size:0.88rem; }
-
     /* ======== CONTACT ======== */
     .contact-grid { display:grid;grid-template-columns:1fr 1.5fr;gap:2.5rem; }
     .contact-card { background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:2rem;display:flex;flex-direction:column;gap:1.4rem; }
@@ -262,7 +234,6 @@
     .c-val { font-size:0.88rem;font-weight:600; }
     .c-val a { color:var(--text);text-decoration:none;transition:color 0.2s; }
     .c-val a:hover { color:var(--primary); }
-
     .form-card { background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:2rem; }
     .form-card h3 { font-size:1.15rem;font-weight:800;margin-bottom:1.4rem; }
     .form-row { display:grid;grid-template-columns:1fr 1fr;gap:1rem; }
@@ -273,7 +244,6 @@
     .fg textarea { resize:vertical;min-height:125px; }
     .btn-send { width:100%;padding:1rem;border-radius:var(--radius-sm);background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:white;border:none;font-weight:800;font-size:0.92rem;cursor:pointer;transition:all 0.3s;display:flex;align-items:center;justify-content:center;gap:0.5rem; }
     .btn-send:hover { box-shadow:0 0 30px rgba(124,58,237,0.45);transform:translateY(-1px); }
-
     /* ======== FOOTER ======== */
     footer { background:var(--bg2);border-top:1px solid var(--border);padding:2.5rem 3rem;text-align:center; }
     footer p { color:var(--text-muted);font-size:0.88rem; }
@@ -281,17 +251,14 @@
     .footer-links { display:flex;justify-content:center;gap:1.5rem;margin-bottom:1rem; }
     .footer-links a { color:var(--text-muted);text-decoration:none;font-size:0.83rem;font-weight:600;transition:color 0.2s; }
     .footer-links a:hover { color:var(--primary); }
-
     /* ======== TOAST ======== */
     #toast { position:fixed;bottom:30px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--surface);border:1px solid var(--green);color:var(--text);padding:0.85rem 1.8rem;border-radius:100px;font-size:0.88rem;font-weight:700;z-index:9999;transition:transform 0.4s cubic-bezier(0.34,1.56,0.64,1),opacity 0.4s;display:flex;align-items:center;gap:0.6rem;opacity:0;box-shadow:0 10px 30px rgba(0,0,0,0.3); }
     #toast.show { transform:translateX(-50%) translateY(0);opacity:1; }
     #toast i { color:var(--green); }
-
     /* ======== BACK TO TOP ======== */
     #btt { position:fixed;bottom:92px;right:24px;z-index:999;width:44px;height:44px;border-radius:50%;background:var(--surface);border:1px solid var(--border);color:var(--text);font-size:0.95rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.3s;opacity:0;pointer-events:none; }
     #btt.show { opacity:1;pointer-events:all; }
     #btt:hover { background:var(--primary);border-color:var(--primary);transform:translateY(-3px); }
-
     /* ======== CHATBOT ======== */
     #cb-toggle { position:fixed;bottom:24px;right:24px;z-index:999;width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:white;border:none;cursor:pointer;font-size:1.25rem;box-shadow:0 0 25px rgba(124,58,237,0.45);transition:all 0.3s;display:flex;align-items:center;justify-content:center; }
     #cb-toggle:hover { transform:scale(1.1);box-shadow:0 0 40px rgba(124,58,237,0.65); }
@@ -312,7 +279,6 @@
     .cb-form input { flex:1;padding:0.58rem 0.8rem;border:none;background:var(--bg2);color:var(--text);border-radius:var(--radius-sm);font-size:0.83rem;outline:none; }
     .cb-form button { background:var(--primary);color:white;border:none;padding:0.58rem 1rem;border-radius:var(--radius-sm);cursor:pointer;margin-left:0.5rem;font-size:0.83rem;font-weight:700;transition:background 0.2s; }
     .cb-form button:hover { background:var(--primary-dark); }
-
     /* ======== MOBILE ======== */
     @media (max-width:900px) {
       .hamburger { display:flex; }
@@ -336,9 +302,7 @@
   </style>
 </head>
 <body>
-
 <div id="page-progress"></div>
-
 <!-- ====== NAV ====== -->
 <nav id="navbar">
   <a href="#hero" class="nav-logo">Majjiga<span class="hl">Rishi</span><span class="dot">.</span></a>
@@ -355,7 +319,6 @@
     <span></span><span></span><span></span>
   </div>
 </nav>
-
 <!-- ====== HERO ====== -->
 <section id="hero" style="max-width:100%;padding:0;">
   <div class="hero-bg"></div>
@@ -363,7 +326,6 @@
   <div class="orb orb-1"></div>
   <div class="orb orb-2"></div>
   <div class="orb orb-3"></div>
-
   <div class="hero-inner">
     <!-- TEXT -->
     <div data-aos="fade-right" data-aos-duration="800" style="display:flex;flex-direction:column;gap:1rem;">
@@ -394,7 +356,6 @@
         <div class="stat"><div class="stat-n"><span class="cu" data-t="4">0</span>+</div><div class="stat-l">AI-Powered Apps</div></div>
       </div>
     </div>
-
     <!-- PHOTO -->
     <div class="hero-visual" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
       <div class="ring-wrap">
@@ -415,7 +376,6 @@
     </div>
   </div>
 </section>
-
 <!-- ====== ABOUT ====== -->
 <section id="about">
   <div class="sec-header" data-aos="fade-up">
@@ -426,9 +386,10 @@
   <div class="about-grid">
     <div data-aos="fade-right">
       <p class="about-p">Hi, I'm <strong>Majjiga Rishi</strong> — a full-stack developer and AI integration specialist. I don't just use AI to speed up coding — I deeply integrate AI into the products I build, making them smarter and more valuable for users.</p>
-      <p class="about-p">From healthcare platforms like <strong>MediFlow</strong> to recipe discovery apps like <strong>LillyRecipes</strong>, I build production-grade apps that harness the power of modern AI APIs, real-time databases, and clean UI design.</p>
+      <p class="about-p">From a browser-wide AI memory layer like <strong>ContextOS</strong> to healthcare platforms like <strong>MediFlow</strong> and recipe discovery apps like <strong>LillyRecipes</strong>, I build production-grade apps that harness the power of modern AI APIs, real-time databases, and clean UI design.</p>
       <p class="about-p">Currently based in <strong>Warangal, India</strong>, I'm open to freelance projects, startup collaborations, and full-time opportunities.</p>
       <div class="hl-list">
+        <div class="hl-item"><i class="fas fa-brain"></i> ContextOS — Browser-wide AI memory layer, works across every tab and AI tool</div>
         <div class="hl-item"><i class="fas fa-heartbeat"></i> MediFlow — AI-powered healthcare management platform</div>
         <div class="hl-item"><i class="fas fa-utensils"></i> LillyRecipes — AI-driven recipe discovery app</div>
         <div class="hl-item"><i class="fas fa-dumbbell"></i> FitnessPro — Smart AI fitness tracking & workout planner</div>
@@ -454,7 +415,6 @@
     </div>
   </div>
 </section>
-
 <!-- ====== SKILLS ====== -->
 <section id="skills" style="background:linear-gradient(180deg,transparent,rgba(124,58,237,0.025),transparent);">
   <div class="sec-header" data-aos="fade-up">
@@ -507,7 +467,6 @@
     </div>
   </div>
 </section>
-
 <!-- ====== PROJECTS ====== -->
 <section id="projects">
   <div class="sec-header" data-aos="fade-up">
@@ -515,7 +474,6 @@
     <h2 class="sec-title">Things I've <span>Built</span></h2>
     <p class="sec-sub">Production-grade applications with deep AI integration at their core</p>
   </div>
-
   <!-- AI Banner -->
   <div class="ai-banner" data-aos="fade-up">
     <div class="ai-banner-icon">🤖</div>
@@ -524,11 +482,28 @@
       <p>These aren't just "AI-assisted" projects — I architected AI as a core product feature, integrating language models, intelligent recommendations, and smart automation directly into the user experience. More work, bigger impact.</p>
     </div>
   </div>
-
   <div class="projects-grid">
-
-    <!-- 1. MediFlow — FEATURED #1 -->
+    <!-- 1. ContextOS — FEATURED #1 -->
     <div class="project-card" data-aos="fade-up" data-aos-delay="0">
+      <div class="proj-img">
+        <div class="proj-placeholder g9">🧠</div>
+        <div class="ai-badge deep">🤖 Deep AI Integration</div>
+        <div class="featured-star">⭐ Featured</div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-title">ContextOS</div>
+        <div class="proj-desc"><strong>Works across your entire browser</strong> — not just one AI tool. Every time you open ChatGPT, Claude, Gemini, Perplexity, or Copilot you have to re-explain who you are, what you're building, and your tech stack — every single session. ContextOS solves that: a Chrome extension injects into every major AI chat site across the browser, so your identity, projects, and knowledge — defined once — are automatically available everywhere, plus an MCP server for tools like Claude and Cursor.</div>
+        <div class="proj-tags">
+          <span class="ptag">Browser Extension</span><span class="ptag">React</span><span class="ptag">TypeScript</span><span class="ptag">FastAPI</span><span class="ptag">PostgreSQL</span><span class="ptag">pgvector</span><span class="ptag">OpenAI</span>
+        </div>
+        <div class="proj-links">
+          <a href="https://contextos-eta.vercel.app" target="_blank" class="plink demo"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+          <a href="https://github.com/rishimajjiga/contextos" target="_blank" class="plink code"><i class="fab fa-github"></i> Code</a>
+        </div>
+      </div>
+    </div>
+    <!-- 2. MediFlow — FEATURED #2 -->
+    <div class="project-card" data-aos="fade-up" data-aos-delay="80">
       <div class="proj-img">
         <div class="proj-placeholder g1">🏥</div>
         <div class="ai-badge deep">🤖 Deep AI Integration</div>
@@ -545,9 +520,8 @@
         </div>
       </div>
     </div>
-
-    <!-- 2. LillyRecipes — FEATURED #2 -->
-    <div class="project-card" data-aos="fade-up" data-aos-delay="80">
+    <!-- 3. LillyRecipes — FEATURED #3 -->
+    <div class="project-card" data-aos="fade-up" data-aos-delay="0">
       <div class="proj-img">
         <div class="proj-placeholder g2">🍽️</div>
         <div class="ai-badge deep">🤖 Deep AI Integration</div>
@@ -564,9 +538,8 @@
         </div>
       </div>
     </div>
-
-    <!-- 3. FitnessPro -->
-    <div class="project-card" data-aos="fade-up" data-aos-delay="0">
+    <!-- 4. FitnessPro -->
+    <div class="project-card" data-aos="fade-up" data-aos-delay="80">
       <div class="proj-img">
         <div class="proj-placeholder g3">💪</div>
         <div class="ai-badge deep">🤖 Deep AI Integration</div>
@@ -582,8 +555,7 @@
         </div>
       </div>
     </div>
-
-    <!-- 4. Rishi Chat App -->
+    <!-- 5. Rishi Chat App -->
     <div class="project-card" data-aos="fade-up" data-aos-delay="80">
       <div class="proj-img">
         <div class="proj-placeholder g4">💬</div>
@@ -600,7 +572,6 @@
         </div>
       </div>
     </div>
-
     <!-- NO AI DIVIDER -->
     <div style="grid-column:1/-1;display:flex;align-items:center;gap:1rem;margin:1rem 0 0.5rem;" data-aos="fade-up">
       <div style="flex:1;height:1px;background:var(--border);"></div>
@@ -609,8 +580,7 @@
       </div>
       <div style="flex:1;height:1px;background:var(--border);"></div>
     </div>
-
-    <!-- 5. Rishi Weather -->
+    <!-- 6. Rishi Weather -->
     <div class="project-card" data-aos="fade-up" data-aos-delay="0">
       <div class="proj-img">
         <div class="proj-placeholder g5">🌦️</div>
@@ -628,8 +598,7 @@
         </div>
       </div>
     </div>
-
-    <!-- 6. Student Portal -->
+    <!-- 7. Student Portal -->
     <div class="project-card" data-aos="fade-up" data-aos-delay="80">
       <div class="proj-img">
         <div class="proj-placeholder g6">🎓</div>
@@ -647,8 +616,7 @@
         </div>
       </div>
     </div>
-
-    <!-- 7. Countdown Timer -->
+    <!-- 8. Countdown Timer -->
     <div class="project-card" data-aos="fade-up" data-aos-delay="0">
       <div class="proj-img">
         <div class="proj-placeholder g7">⏱️</div>
@@ -666,8 +634,7 @@
         </div>
       </div>
     </div>
-
-    <!-- 8. Quiz App -->
+    <!-- 9. Quiz App -->
     <div class="project-card" data-aos="fade-up" data-aos-delay="80">
       <div class="proj-img">
         <div class="proj-placeholder g8">📝</div>
@@ -684,16 +651,13 @@
         </div>
       </div>
     </div>
-
   </div>
-
   <div class="projects-more" data-aos="fade-up">
     <a href="https://github.com/rishimajjiga" target="_blank" class="gh-link">
       <i class="fab fa-github"></i> See all projects on GitHub <i class="fas fa-arrow-right"></i>
     </a>
   </div>
 </section>
-
 <!-- ====== RESUME ====== -->
 <section id="resume" style="background:none;">
   <div class="resume-box" data-aos="zoom-in">
@@ -706,7 +670,6 @@
     </div>
   </div>
 </section>
-
 <!-- ====== FAQ ====== -->
 <section id="faq">
   <div class="sec-header" data-aos="fade-up">
@@ -736,7 +699,6 @@
     </details>
   </div>
 </section>
-
 <!-- ====== CONTACT ====== -->
 <section id="contact">
   <div class="sec-header" data-aos="fade-up">
@@ -780,7 +742,6 @@
     </div>
   </div>
 </section>
-
 <!-- ====== FOOTER ====== -->
 <footer>
   <div class="footer-links">
@@ -788,12 +749,10 @@
   </div>
   <p>&copy; 2025 <strong>Majjiga Rishi</strong>. Built with 💜 &amp; AI in Warangal, India.</p>
 </footer>
-
 <!-- Toast -->
 <div id="toast"><i class="fas fa-check-circle"></i> <span id="toastTxt">Sent!</span></div>
 <!-- Back to Top -->
 <button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top"><i class="fas fa-arrow-up"></i></button>
-
 <!-- Chatbot -->
 <div id="chatbot">
   <div class="cb-head">
@@ -812,11 +771,9 @@
   </form>
 </div>
 <button id="cb-toggle" onclick="toggleChat()"><i class="fas fa-comment-dots"></i></button>
-
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
 AOS.init({duration:720, easing:'ease-out-cubic', once:true});
-
 // Typing
 const roles = ['Full-Stack Developer','AI Integration Specialist','Python Developer','Web App Builder','Product Maker'];
 let ri=0,ci=0,del=false;
@@ -827,11 +784,9 @@ function type(){
   setTimeout(type,del?55:95);
 }
 type();
-
 // Count up
 const cuObs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){const el=x.target,t=+el.dataset.t;let c=0;const s=Math.ceil(t/28),ti=setInterval(()=>{c=Math.min(c+s,t);el.textContent=c;if(c>=t)clearInterval(ti);},50);cuObs.unobserve(el);}});});
 document.querySelectorAll('.cu').forEach(el=>cuObs.observe(el));
-
 // Scroll
 window.addEventListener('scroll',()=>{
   const y=window.scrollY, tot=document.body.scrollHeight-window.innerHeight;
@@ -846,22 +801,18 @@ window.addEventListener('scroll',()=>{
     }
   });
 });
-
 // Nav
 document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{
   const t=document.querySelector(a.getAttribute('href'));
   if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});document.getElementById('navLinks').classList.remove('open');}
 }));
-
 // Theme
 document.getElementById('themeBtn').addEventListener('click',function(){
   document.body.classList.toggle('light');
   this.textContent=document.body.classList.contains('light')?'☀️':'🌙';
 });
-
 // Mobile menu
 function toggleMenu(){document.getElementById('navLinks').classList.toggle('open');}
-
 // Toast
 function showToast(msg,err){
   const t=document.getElementById('toast');
@@ -869,7 +820,6 @@ function showToast(msg,err){
   t.querySelector('i').style.color=err?'#ef4444':'var(--green)';
   t.classList.add('show');setTimeout(()=>t.classList.remove('show'),4000);
 }
-
 // Contact
 document.getElementById('contactForm').addEventListener('submit',async e=>{
   e.preventDefault();
@@ -881,7 +831,6 @@ document.getElementById('contactForm').addEventListener('submit',async e=>{
   }catch{showToast('Network error. Try again.',true);}
   btn.innerHTML='<i class="fas fa-paper-plane"></i> Send Message';btn.disabled=false;
 });
-
 // Chatbot
 let cbOpen=false;
 function toggleChat(){
@@ -893,6 +842,7 @@ function toggleChat(){
 const answers={
   mediflow:'MediFlow is an AI-powered healthcare management platform with symptom analysis, appointment scheduling, and prescription tracking! 🏥',
   lilly:'LillyRecipes is an AI-driven recipe discovery app — describe what\'s in your fridge and AI generates personalized recipes! 🍽️',
+  contextos:'ContextOS is a "second brain" browser extension for AI — it injects into ChatGPT, Claude, Gemini, Perplexity, Copilot and more across your entire browser, so your identity, projects, and knowledge (defined once) are available everywhere automatically. Built with React, FastAPI, and pgvector! 🧠',
   fitness:'FitnessPro is a smart AI fitness tracker that creates personalized workout plans and adapts based on your performance! 💪',
   chat:'The Rishi Chat App is a real-time messaging platform with deep AI integration — chat live and summon AI mid-conversation! 💬',
   weather:'Rishi Weather shows live weather data using the OpenWeatherMap API! 🌦️',
@@ -913,12 +863,11 @@ function sendMsg(e){
   box.innerHTML+=`<div class="cmsg user">${msg}</div>`;
   inp.value='';
   const lo=msg.toLowerCase();
-  let rep="I'm not sure about that. Try asking about MediFlow, LillyRecipes, FitnessPro, skills, or contact info! 😊";
+  let rep="I'm not sure about that. Try asking about MediFlow, LillyRecipes, ContextOS, FitnessPro, skills, or contact info! 😊";
   for(const[k,v]of Object.entries(answers)){if(lo.includes(k)){rep=v;break;}}
   setTimeout(()=>{box.innerHTML+=`<div class="cmsg bot">${rep}</div>`;box.scrollTop=9999;},380);
   box.scrollTop=9999;
 }
-
 // Profile fallback
 document.getElementById('profImg').onerror=function(){
   this.style.display='none';
